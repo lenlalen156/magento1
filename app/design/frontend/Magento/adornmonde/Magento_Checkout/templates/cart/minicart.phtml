@@ -8,37 +8,16 @@
 ?>
 
 <div data-block="minicart" class="minicart-wrapper">
-    <div class="div-icon">
-        <a class="link-text-icon"><p class="text-icon"><strong>Sign in</strong></p></a>
-    </div>
+<!--    <div class="div-icon">-->
+<!--        <a class="link-text-icon"><p class="text-icon"><strong>Sign in</strong></p></a>-->
+<!--    </div>-->
 
     <div class="div-icon">
         <a class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
            data-bind="scope: 'minicart_content'">
-<!--            <img src="--><?php //echo $this->getViewFileUrl('images/ngoisao.png'); ?><!--" />-->
-            <i class="far fa-star"></i>
-        </a>
-        <a class="link-text-icon"><p class="text-icon"><strong>Favorites</strong></p></a>
-    </div>
-
-    <div class="div-icon">
-        <a class="action " href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
-           data-bind="scope: 'minicart_content'">
-
-<!--            <img src="--><?php //echo $this->getViewFileUrl('images/kinhlup.png'); ?><!--" />-->
-            <i class="fas fa-search"></i>
-
-        </a>
-        <a class="link-text-icon"><p class="text-icon"><strong>Search</strong></p></a>
-    </div>
-
-    <div class="div-icon">
-        <a class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
-           data-bind="scope: 'minicart_content'">
-<!--            <img src="--><?php //echo $this->getViewFileUrl('images/tuixach.png'); ?><!--" />-->
             <i class="fas fa-shopping-bag"></i>
         </a>
-        <a class="link-text-icon"><p class="text-icon"><strong>Bag</strong></p></a>
+        <a class="link-text-icon"><p class="text-icon">Bag</p></a>
     </div>
 
 

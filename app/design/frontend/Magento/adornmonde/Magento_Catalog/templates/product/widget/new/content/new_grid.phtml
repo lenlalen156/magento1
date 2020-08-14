@@ -34,13 +34,14 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
 <?php if ($exist) :?>
     <div class="block widget block-new-products <?= /* @noEscape */ $mode ?>">
         <div class="block-title">
-            <strong role="heading" aria-level="2"><?= $block->escapeHtml($title) ?></strong>
-            <strong><p>Discover</p></strong>
+            <div class="title-new-in"><strong role="heading" aria-level="2"><?= $block->escapeHtml($title) ?></strong></div>
+            <div class="title-discover"><strong role="heading" aria-level="2">Discover</strong></div>
+
         </div>
         <div class="block-content">
             <?= /* @noEscape */ '<!-- ' . $image . '-->' ?>
-            <div class="products-<?= /* @noEscape */ $mode ?> <?= /* @noEscape */ $mode ?>">
-                <ol class="item product-items <?= /* @noEscape */ $type ?>">
+            <div class="products-<?= /* @noEscape */ $mode ?> <?= /* @noEscape */ $mode ?>  owl-carousel">
+                <ol class="product-items <?= /* @noEscape */ $type ?> ">
                     <?php  foreach ($items as $_item) :  ?>
                         <li class="product-item">
                             <div class="product-item-info">
@@ -56,74 +57,7 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                                             <?= $block->escapeHtml($_item->getName()) ?>
                                         </a>
                                     </strong>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product-item">
-                            <div class="product-item-info">
-                                <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                   class="product-item-photo">
-                                    <?= $block->getImage($_item, $image)->toHtml() ?>
-                                </a>
-                                <div class="product-item-details">
-                                    <strong class="product-item-name">
-                                        <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
-                                           href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                           class="product-item-link">
-                                            <?= $block->escapeHtml($_item->getName()) ?>
-                                        </a>
-                                    </strong>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product-item">
-                            <div class="product-item-info">
-                                <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                   class="product-item-photo">
-                                    <?= $block->getImage($_item, $image)->toHtml() ?>
-                                </a>
-                                <div class="product-item-details">
-                                    <strong class="product-item-name">
-                                        <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
-                                           href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                           class="product-item-link">
-                                            <?= $block->escapeHtml($_item->getName()) ?>
-                                        </a>
-                                    </strong>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product-item">
-                            <div class="product-item-info">
-                                <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                   class="product-item-photo">
-                                    <?= $block->getImage($_item, $image)->toHtml() ?>
-                                </a>
-                                <div class="product-item-details">
-                                    <strong class="product-item-name">
-                                        <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
-                                           href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                           class="product-item-link">
-                                            <?= $block->escapeHtml($_item->getName()) ?>
-                                        </a>
-                                    </strong>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product-item">
-                            <div class="product-item-info">
-                                <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                   class="product-item-photo">
-                                    <?= $block->getImage($_item, $image)->toHtml() ?>
-                                </a>
-                                <div class="product-item-details">
-                                    <strong class="product-item-name">
-                                        <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
-                                           href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
-                                           class="product-item-link">
-                                            <?= $block->escapeHtml($_item->getName()) ?>
-                                        </a>
-                                    </strong>
+                                    <p>925 Sikver Twist Earrings</p>
                                 </div>
                             </div>
                         </li>
@@ -137,13 +71,13 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
 <script type="text/javascript" xml="space">
     require([
         'jquery',
-        'owl.carousel'
+        'owlcarousel'
     ], function($){
         $(document).ready(function() {
             $('.owl-carousel ').owlCarousel({
                 loop:true,
                 nav:true,
-                items:1,
+                items:4.5,
                 dots:true,
                 autoplay:false,
                 autoplayTimeout:3000

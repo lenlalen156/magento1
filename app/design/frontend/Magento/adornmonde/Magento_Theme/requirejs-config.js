@@ -1,6 +1,6 @@
 var config = {
     paths: {
-        'owlcarousel': "js/owlcarousel"
+        'owlcarousel': "js/owl.carousel"
     },
     shim: {
         'owlcarousel': {

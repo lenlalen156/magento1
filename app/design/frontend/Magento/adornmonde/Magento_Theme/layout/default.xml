@@ -5,36 +5,39 @@ ge_configuration.xsd">
     <body>
         <referenceBlock name="logo">
             <action method="setLogoFile">
-                <argument name="logo_file" xsi:type="string">images/avatar-adornmonde.png</argument>
+                <!--<argument name="logo_file" xsi:type="string">images/avatar-adornmonde.png</argument>-->
+                <argument name="logo_file" xsi:type="string">images/img.png</argument>
             </action>
         </referenceBlock>
 
 
         <!--remove -->
-        <referenceBlock name="register-link" remove="true" />
 
 
         <referenceBlock name="authorization-link" remove="true" />
-        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="register-link" remove="true" />
+        <!--<referenceBlock name="wish-list-link" remove="true" />-->
         <referenceContainer name="div.sidebar.additional" remove="true"/>
 
 
-        <referenceBlock name="my-account-link" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="absolute_footer" remove="true" />
         <referenceBlock name="footer_links" remove="true" />
         <referenceBlock name="copyright" remove="true" />
-        <referenceBlock name="top.links" remove="true" />
+        <!--<referenceBlock name="top.links" remove="true" />-->
 
         <referenceBlock name="store_switcher" remove="true" />
-        <referenceContainer name="div.sidebar.additional" remove="true"/>
-        <referenceBlock name="top.search" remove="true"/>
+        <!--<referenceBlock name="top.search" remove="true"/>-->
+        <!--<referenceContainer name="div.sidebar.additional" remove="true"/>-->
+
 
 
         <!--move -->
         <move element="store_language" as="store_language" destination="header-wrapper" before="logo" />
-        <!--<move element="store.settings.currency" as="store.settings.currency" destination="header-wrapper" after="store_language" />-->
         <move element="currency" destination="header-wrapper" before="logo"/>
+        <move element="top.links" destination="header-wrapper" before="top.search"/>
+        <move element="top.search" destination="header-wrapper" after="minicart"/>
+
         <move element="store.menu" as="store.menu" destination="header-wrapper"  />
 
 
@@ -274,35 +277,41 @@ ge_configuration.xsd">
 
         <!--footer-->
         <referenceBlock name="footer">
-            <block class="Magento\Framework\View\Element\Html\Links" name="footer_account" before="-">
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_about_adornmonde" before="-" >
                 <arguments>
-                    <argument name="css_class" xsi:type="string">footer links account</argument>
+                    <argument name="css_class" xsi:type="string">footer links about adornmonde</argument>
                 </arguments>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer-account-title">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer-about-adornmonde-title">
                     <arguments>
-                        <argument name="label" xsi:type="string">ACCOUNT</argument>
+                        <argument name="label" xsi:type="string">ABOUT ADORNMONDE</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="sign-in-link">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="about-us-link">
                     <arguments>
-                        <argument name="label" xsi:type="string">Sign in</argument>
+                        <argument name="label" xsi:type="string">About us</argument>
                         <argument name="path" xsi:type="string">customer/account/login</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="return-order-link">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="our-metarials-link">
                     <arguments>
-                        <argument name="label" xsi:type="string">Return your oder</argument>
+                        <argument name="label" xsi:type="string">Our metarials</argument>
                         <argument name="path" xsi:type="string">return-order</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="order-lookup-link">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="affiliates-link">
                     <arguments>
-                        <argument name="label" xsi:type="string">Order lookup</argument>
+                        <argument name="label" xsi:type="string">Affiliates</argument>
                         <argument name="path" xsi:type="string">order-lookup</argument>
                     </arguments>
                 </block>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="press-more">
+                    <arguments>
+                        <argument name="label" xsi:type="string">Press  more</argument>
+                        <argument name="path" xsi:type="string">press-more</argument>
+                    </arguments>
+                </block>
             </block>
-            <block class="Magento\Framework\View\Element\Html\Links" name="footer_customer_care" before="footer_account" >
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_customer_care" before="footer_about_adornmonde" >
                 <arguments>
                     <argument name="css_class" xsi:type="string">footer links customer care</argument>
                 </arguments>
@@ -331,38 +340,31 @@ ge_configuration.xsd">
                     </arguments>
                 </block>
             </block>
-            <block class="Magento\Framework\View\Element\Html\Links" name="footer_about_adornmonde" before="footer_customer_care" >
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_account" before="footer_customer_care">
                 <arguments>
-                    <argument name="css_class" xsi:type="string">footer links about adornmonde</argument>
+                    <argument name="css_class" xsi:type="string">footer links account</argument>
                 </arguments>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer-about-adornmonde-title">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="footer-account-title">
                     <arguments>
-                        <argument name="label" xsi:type="string">ABOUT ADORNMONDE</argument>
-                        <argument name="label" xsi:type="string">Press  more</argument>
-                        <argument name="path" xsi:type="string">order-lookup</argument>
+                        <argument name="label" xsi:type="string">ACCOUNT</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="about-us-link">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="sign-in-link">
                     <arguments>
-                        <argument name="label" xsi:type="string">About us</argument>
+                        <argument name="label" xsi:type="string">Sign in</argument>
                         <argument name="path" xsi:type="string">customer/account/login</argument>
                     </arguments>
                 </block>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="our-metarials-link">
+                <block class="Magento\Framework\View\Element\Html\Link\Current" name="return-order-link">
                     <arguments>
-                        <argument name="label" xsi:type="string">Our metarials</argument>
+                        <argument name="label" xsi:type="string">Return your oder</argument>
                         <argument name="path" xsi:type="string">return-order</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Framework\View\Element\Html\Link\Current" name="affiliates-link">
-                    <arguments>
-                        <argument name="label" xsi:type="string">Affiliates</argument>
-                        <argument name="path" xsi:type="string">order-lookup</argument>
                     </arguments>
                 </block>
                 <block class="Magento\Framework\View\Element\Html\Link\Current" name="order-lookup-link">
                     <arguments>
-                        <argument name="label" xsi:type="string">ABOUT ADORNMONDE</argument>
+                        <argument name="label" xsi:type="string">Order lookup</argument>
+                        <argument name="path" xsi:type="string">order-lookup</argument>
                     </arguments>
                 </block>
             </block>

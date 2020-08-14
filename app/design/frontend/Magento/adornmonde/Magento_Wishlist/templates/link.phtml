@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/* @var \Magento\Wishlist\Block\Link $block */
+?>
+<li class="link wishlist" data-bind="scope: 'wishlist'">
+    <div class="div-icon">
+        <a class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
+           data-bind="scope: 'minicart_content'">
+            <!--            <img src="--><?php //echo $this->getViewFileUrl('images/ngoisao.png'); ?><!--" />-->
+
+            <i class="far fa-star"></i>
+        </a>
+        <a class="link-text-icon"><p class="text-icon">Favorites</p></a>
+    </div>
+</li>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+
+</script>
