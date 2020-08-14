@@ -51,9 +51,14 @@ body{
     border-color:transparent;
     background-image:none;
     box-shadow:none;
+
+    text-align: center;
+    display: block;
   }
   .navigation ul {
     margin-top: 1vw;
+    width: max-content;
+    margin: auto;
   }
   .navigation li a {
     font-size:20px;
@@ -63,7 +68,7 @@ body{
     background: unset;
   }
   .navigation .level0>.level-top {
-    padding: 0px 40px;
+    padding: 0 0 0 6vw;
     color: black;
     font-family: sans-serif;
   }
@@ -71,7 +76,7 @@ body{
 
   .block-search {
     width: auto;
-    padding-top: 50px;
+    padding-top: 2.5vw;
   }
   .block-search .action.search{
     position: unset;
@@ -85,7 +90,7 @@ body{
     width: auto;
     padding-left: 15px;
     display: inline-block;
-    padding-top: 50px;
+    padding-top: 2.5vw;
   }
   .minicart-wrapper .div-icon .link-text-icon{
     color: black;
@@ -113,6 +118,9 @@ body{
   .page-header .switcher strong {
     font-weight: bold;
   }
+  .page-header .panel.header .action skip contentarea{
+    font-size: 18px;
+  }
 
   .logo{
     float: unset;
@@ -121,7 +129,7 @@ body{
     max-width: 20%;
     padding-top: 20px;
     display: inline-block;
-    padding-left: 32vw;
+    padding-left: 31vw;
   }
 
   //background: image
@@ -136,7 +144,7 @@ body{
     display: inline-block;
     list-style: none;
     float: right;
-    padding-top: 50px;
+    padding-top: 2.5vw;
   }
   .header.content .header.links a{
     color: black;
@@ -177,15 +185,94 @@ body{
     font-size: 20px;
     font-weight: bold;
   }
+  .block.widget .block-content .product-item-details .product-item-name,
+  .block.widget .block-content .product-item-details .product-item-name p{
+    text-align: left;
+  }
   .block.widget .block-content .product-item-details p {
 
   }
   .product-image-container {
     width: 350px !important;
   }
+  .product-image-container .product-image-wrapper{
+    width: 330px;
+    height: 420px;
+    padding-bottom: 0 !important;
+  }
   .product-item-details{
     padding-left: 30px;
   }
+
+
+  .carousel-wrap {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  .owl-carousel .owl-nav{
+    overflow: hidden;
+    height: 0px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #2caae1;
+  }
+  .owl-carousel .owl-nav.disabled{
+    display: unset;
+  }
+  .owl-carousel .item {
+    text-align: center;
+  }
+  .owl-carousel .nav-btn{
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 100px !important;
+  }
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+  .owl-carousel .prev-slide{
+    //background: url(nav-icon.png) no-repeat scroll 0 0;
+    background-color: black;
+    left: -33px;
+    margin-top: 70px;
+  }
+  .owl-carousel .next-slide{
+    //background: url(nav-icon.png) no-repeat scroll -24px 0px;
+    background-color: black;
+    right: -33px;
+    margin-top: 70px;
+  }
+  .owl-carousel .prev-slide:hover{
+    background-position: 0px -53px;
+  }
+  .owl-carousel .next-slide:hover{
+    background-position: -24px -53px;
+  }
+
+  span.img-text {
+    text-decoration: none;
+    outline: none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    cursor: pointer;
+    width: 100%;
+    font-size: 23px;
+    display: block;
+    text-transform: capitalize;
+  }
+  span.img-text:hover {
+    color: #2caae1;
+  }
+
+
 
 
 
@@ -198,8 +285,7 @@ body{
     padding-bottom: 0;
   }
   .columns .column.main .block p:last-child {
-
-    display: inline-block;
+    text-align: left;
   }
   .columns .column.main .block.widget .product-item-info {
     //text-align: center;
@@ -429,11 +515,13 @@ body{
     padding:  0 10px 0 0;
     font-weight: bold;
   }
-  .bottom-content-footer .bottom-content-footer-right {}
+  .bottom-content-footer .bottom-content-footer-right {
+    padding-top:15px;
+  }
   .bottom-content-footer .bottom-content-footer-right img{
     float: right;
     padding: 0 10px;
-    height: 40px;
+    height: 35px;
   }
 
 

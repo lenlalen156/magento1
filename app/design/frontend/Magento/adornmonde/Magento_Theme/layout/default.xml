@@ -4,10 +4,10 @@
 ge_configuration.xsd">
     <body>
         <referenceBlock name="logo">
-            <action method="setLogoFile">
-                <!--<argument name="logo_file" xsi:type="string">images/avatar-adornmonde.png</argument>-->
-                <argument name="logo_file" xsi:type="string">images/img.png</argument>
-            </action>
+                <action method="setLogoFile">
+                        <argument name="logo_file" xsi:type="string">images/img.png</argument>
+                </action>
+
         </referenceBlock>
 
 
