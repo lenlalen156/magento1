@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/m
+enu.xsd">
+    <menu>
+        <add
+                id="Theme_Module::helloworld"
+                title="HelloWorld"
+                module="Theme_Module"
+                sortOrder="50"
+                parent="Magento_Backend::marketing"
+                resource="Theme_Module::helloworld"
+        />
+        <add
+                id="Theme_Module::index"
+                title="Helloworld Index"
+                module="Theme_Module"
+                sortOrder="55"
+                parent="Theme_Module::helloworld"
+                action="helloworld/index/"
+                resource="Theme_Module::index"
+        />
+    </menu>
+</config>
