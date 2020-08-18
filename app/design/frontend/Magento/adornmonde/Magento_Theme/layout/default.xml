@@ -35,8 +35,11 @@ ge_configuration.xsd">
         <!--move -->
         <move element="store_language" as="store_language" destination="header-wrapper" before="logo" />
         <move element="currency" destination="header-wrapper" before="logo"/>
-        <move element="top.links" destination="header-wrapper" before="top.search"/>
-        <move element="top.search" destination="header-wrapper" after="minicart"/>
+
+        <!--<move element="top.links" destination="header-wrapper" before="top.search"/>-->
+        <move element="top.links" destination="header-wrapper" after="logo"/>
+        <move element="top.search" destination="header-wrapper" after="top.links"/>
+        <move element="minicart" destination="header-wrapper" after="top.search"/>
 
         <move element="store.menu" as="store.menu" destination="header-wrapper"  />
 
@@ -86,7 +89,7 @@ ge_configuration.xsd">
 
 
 
-                <block class="Magento\Framework\View\Element\Template" name="slide-products" template="Magento_Theme::slide_products.phtml"/>
+                <!--<block class="Magento\Framework\View\Element\Template" name="slide-products" template="Magento_Theme::slide_products.phtml"/>-->
                 <!--<block class="Magento\Catalog\Block\Product\ListProduct" name="slide-products" template="Magento_Catalog::list.phtml"/>-->
             </container>
             <!--content one-->
