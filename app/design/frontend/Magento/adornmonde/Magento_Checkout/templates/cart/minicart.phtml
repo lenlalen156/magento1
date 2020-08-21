@@ -13,11 +13,15 @@
 <!--    </div>-->
 
     <div class="div-icon">
-        <a class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
+        <a id="cart-show" class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
+           data-bind="scope: 'minicart_content'">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Bag</span>
+        </a>
+        <a id="cart-hidden d-none" class="action icon-hidden" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
            data-bind="scope: 'minicart_content'">
             <i class="fas fa-shopping-bag"></i>
         </a>
-        <a class="link-text-icon"><p class="text-icon">Bag</p></a>
     </div>
 
 

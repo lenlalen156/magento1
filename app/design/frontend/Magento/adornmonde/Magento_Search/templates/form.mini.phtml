@@ -14,17 +14,23 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
 <div class="block block-search">
     <div class="block block-title"><strong><?= $block->escapeHtml(__('Search')) ?></strong></div>
     <div class="block block-content">
-        <form class="form minisearch" id="search_mini_form"
-              action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
+        <form class="form minisearch" id="search_mini_form" action="<?= $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
             <div class="actions">
-                <button type="submit"
-                        title="<?= $block->escapeHtmlAttr(__('Search')) ?>"
-                        class="action search"
-                        aria-label="Search"
-                >
-                    <span><?= $block->escapeHtml(__('Search')) ?></span>
-                </button>
-                <p>Seach</p>
+                <div class="div-icon">
+                    <a id="search-show" class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
+                       data-bind="scope: 'search_content'">
+                        <!--            <img src="--><?php //echo $this->getViewFileUrl('images/ngoisao.png'); ?><!--" />-->
+
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                    <a id="search-hidden d-none" class="action" href="<?= $block->escapeUrl($block->getShoppingCartUrl()) ?>"
+                       data-bind="scope: 'search_content'">
+                        <!--            <img src="--><?php //echo $this->getViewFileUrl('images/ngoisao.png'); ?><!--" />-->
+
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
             </div>
         </form>
     </div>

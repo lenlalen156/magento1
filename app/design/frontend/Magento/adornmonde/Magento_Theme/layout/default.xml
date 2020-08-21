@@ -37,9 +37,9 @@ ge_configuration.xsd">
         <move element="currency" destination="header-wrapper" before="logo"/>
 
         <!--<move element="top.links" destination="header-wrapper" before="top.search"/>-->
-        <move element="top.links" destination="header-wrapper" after="logo"/>
-        <move element="top.search" destination="header-wrapper" after="top.links"/>
-        <move element="minicart" destination="header-wrapper" after="top.search"/>
+        <move element="minicart" destination="header-wrapper" after="logo"/>
+        <move element="top.search" destination="header-wrapper" after="minicart"/>
+        <move element="top.links" destination="header-wrapper" after="minicart"/>
 
         <move element="store.menu" as="store.menu" destination="header-wrapper"  />
 
