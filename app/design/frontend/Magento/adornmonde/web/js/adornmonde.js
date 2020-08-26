@@ -19,6 +19,7 @@ require(['jquery'], function($){
             $('#search-hidden').removeClass('d-none');
             $('#cart-hidden').removeClass('d-none');
             $('.navigation').addClass('d-none');
+            $('.nav.item.current').addClass('d-none');
         }else{
             $('#switcher-currency-trigger').removeClass('d-none');
             $('#switcher-language').removeClass('d-none');
@@ -28,6 +29,7 @@ require(['jquery'], function($){
             $('#search-hidden').addClass('d-none');
             $('#cart-hidden').addClass('d-none');
             $('.navigation').removeClass('d-none');
+            $('.nav.item.current').removeClass('d-none');
         }
     }
 });

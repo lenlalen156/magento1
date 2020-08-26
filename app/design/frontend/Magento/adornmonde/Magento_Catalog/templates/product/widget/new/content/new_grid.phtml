@@ -78,6 +78,54 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                                         <p>925 Sikver Twist Earrings</p>
                                     </div>
                                 </div>
+                                <div class="item">
+                                    <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                       class="product-item-photo">
+                                        <?= $block->getImage($_item, $image)->toHtml() ?>
+                                    </a>
+                                    <div class="product-item-details">
+                                        <strong class="product-item-name">
+                                            <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
+                                               href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                               class="product-item-link">
+                                                <?= $block->escapeHtml($_item->getName()) ?>
+                                            </a>
+                                        </strong>
+                                        <p>925 Sikver Twist Earrings</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                       class="product-item-photo">
+                                        <?= $block->getImage($_item, $image)->toHtml() ?>
+                                    </a>
+                                    <div class="product-item-details">
+                                        <strong class="product-item-name">
+                                            <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
+                                               href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                               class="product-item-link">
+                                                <?= $block->escapeHtml($_item->getName()) ?>
+                                            </a>
+                                        </strong>
+                                        <p>925 Sikver Twist Earrings</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                       class="product-item-photo">
+                                        <?= $block->getImage($_item, $image)->toHtml() ?>
+                                    </a>
+                                    <div class="product-item-details">
+                                        <strong class="product-item-name">
+                                            <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
+                                               href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                               class="product-item-link">
+                                                <?= $block->escapeHtml($_item->getName()) ?>
+                                            </a>
+                                        </strong>
+                                        <p>925 Sikver Twist Earrings</p>
+                                    </div>
+                                </div>
 
 
 
@@ -102,9 +150,22 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                 loop:true,
                 margin: 10,
                 nav:true,
-                // navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
                 navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
                 items:4.5,
+                responsive: {
+                    300: {
+                        items: 1.5
+                    },
+                    767: {
+                        items: 3.5
+                    },
+                    960: {
+                        items: 4.5
+                    },
+                    1000: {
+                        items: 4.5
+                    }
+                }
             });
 
         });
