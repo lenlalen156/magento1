@@ -146,7 +146,7 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
         'owlcarousel'
     ], function($){
         $(document).ready(function() {
-            $('.owl-carousel ').owlCarousel({
+            $('.owl-carousel.owl-theme ').owlCarousel({
                 loop:true,
                 margin: 10,
                 nav:true,
@@ -155,6 +155,15 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
                 responsive: {
                     300: {
                         items: 1.5
+                    },
+                    481: {
+                        items: 2.5
+                    },
+                    590: {
+                        items: 2.5
+                    },
+                    650: {
+                        items: 3.5
                     },
                     767: {
                         items: 3.5
