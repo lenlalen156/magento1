@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/pa
+ge_configuration.xsd">
+    <body>
+
+        <referenceContainer name="main"  >
+            <container name="content1" htmlTag="div" htmlClass="row" >
+                <container name="filter" htmlTag="div" htmlClass="col-6" >
+                    <block class="Magento\Framework\View\Element\Template" name="filter" template="Magento_Layered_Navigation::view/frontend/templates/layer/view.phtml"/>
+                </container>
+                <container name="panigation" htmlTag="div" htmlClass="col-6" ></container>
+            </container>
+        </referenceContainer>
+
+    </body>
+</page>
+
+
